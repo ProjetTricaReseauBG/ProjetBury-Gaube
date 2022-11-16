@@ -34,9 +34,9 @@ public class ControlerTournoisTest {
 
     @Test
     public void AfficheTournois() throws Exception{
-        tournois.add(new Tournois("nom1","jeux1",12,23432,1,new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2012-07-10 14:58:00")));
-        tournois.add(new Tournois("nom2","jeux2",13,48578,1,new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2012-07-10 14:58:00")));
-        tournois.add(new Tournois("nom3","jeux3",14,49504,1,new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2012-07-10 14:58:00")));
+        tournois.add(new Tournois("nom1","jeux1",12,23432,new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2012-07-10 14:58:00")));
+        tournois.add(new Tournois("nom2","jeux2",13,48578,new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2012-07-10 14:58:00")));
+        tournois.add(new Tournois("nom3","jeux3",14,49504,new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2012-07-10 14:58:00")));
 
         //stub
 

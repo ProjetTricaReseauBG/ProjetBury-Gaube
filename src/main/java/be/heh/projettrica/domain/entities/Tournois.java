@@ -12,13 +12,10 @@ public class Tournois {
     private final String name;
 
     @Getter
-    private final String jeu;
+    private final String jeux;
 
     @Getter
     private final int nbPart;
-
-    @Getter
-    private final int numerot;
 
     @Getter
     private final int visible;
