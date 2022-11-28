@@ -36,6 +36,10 @@ header div.sepa{
 
 }
 
+.invisible{
+  display: none;
+}
+
 
 
 header div .fondgris{
