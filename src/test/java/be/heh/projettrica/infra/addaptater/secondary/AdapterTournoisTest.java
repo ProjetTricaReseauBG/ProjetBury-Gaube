@@ -39,7 +39,7 @@ public class AdapterTournoisTest extends AbstractIntergrationTest{
         tournois = tournoisPersistenceAdapter.getTournoisList();
 
         assertEquals("name1",tournois.get(0).getName());
-        assertEquals("jeux2",tournois.get(1).getJeux());
+        assertEquals("dota",tournois.get(1).getJeux());
         assertEquals(14,tournois.get(2).getNbPart());
     }
 }

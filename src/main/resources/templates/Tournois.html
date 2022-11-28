@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="/Style/style.css" />
+    <link rel="stylesheet" href="/Script/Tournois.js" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tournois</title>
 </head>
@@ -37,25 +38,24 @@
     </div>
 </header>
 <main>
-    <div>
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Jeux</th>
-                <th>NbPart</th>
-                <th>Visible</th>
-                <th>Date</th>
-            </tr>
-            <tr th:each="tournoi : ${tournois}">
-                <td th:text="${tournoi.getName()}"></td>
-                <td th:text="${tournoi.getJeux()}"></td>
-                <td th:text="${tournoi.getNbPart()}"></td>
-                <td th:text="${tournoi.getVisible()}"></td>
-                <td th:text="${tournoi.getDate()}"></td>
+    <div class="sepaT">
 
-            </tr>
-        </table>
-    </div>
+        <div>
+            <h2>Bienvenue sur votre compte HEL</h2>';
+        </div>
+        <div id="produittournoiNow">
+            <article th:each="tournoi : ${tournois}" >
+                <div id="img">
+                    <img th:src="'/Img/'+${tournoi.getJeux()}+'.jpeg'">
+                </div>
+                <div id="ref">
+                    <h2 th:text="${tournoi.getName()}"></h2>
+                </div>
+                <h5 th:text="${tournoi.getNbPart()}">Nombre de participant :</h5>
+                <h5 th:text="${tournoi.getDate()}">Date et heure :</h5>
+            </article>
+        </div>
+
     </div>
 </main>
 <footer class="footer">
