@@ -32,10 +32,15 @@ public class ControlerTournois {
         model.addAttribute("tournois",getTournois());
         return "Tournois";
     }
+    @GetMapping("/addTournois")
+    public String AddTournois(){
+        return "/AddTournois";
+    }
+
 
     @PostMapping("/addTournoisForm")
     @ResponseBody
-    public RedirectView addShoppingCart(@ModelAttribute("addAlbum") Tournois tournois) throws Exception{
+    public RedirectView addTournois(@ModelAttribute("tournoisadd") Tournois tournois) throws Exception{
         Tournois tournoisadd = new Tournois(tournois.getName(),tournois.getJeux(),tournois.getNbPart(),tournois.getVisible(),tournois.getDate());
         portInTournois.AddTournois(tournoisadd);
         return new RedirectView("/");
