@@ -1,91 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="/Style/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tournois</title>
-</head>
-<body>
-<header>
-    <h1>Tournois Esport</h1>
-    <div>
-
+  </head>
+  <body>
+    <header>
+      <h1>Tournois Esport</h1>
+      <div>
         <div class="fondgris">
-
-            <div class="nom">
-                <div class="sepa">
-                    <img class="icone" src="/Img/icone.jpeg" alt="ma photo de cv">
-                    <h2>HEL</h2>
-                </div>
-                <div>
-                </div>
+          <div class="nom">
+            <div class="sepa">
+              <img class="icone" src="/Img/icone.jpeg" alt="ma photo de cv" />
+              <h2>HEL</h2>
             </div>
-            <div class='menu'>
+            <div></div>
+          </div>
+          <div class="menu">
             <ul>
-                <li><a href=''>Accueil</a></li>
-                <li><a href=''>Tournois</a></li>
-                <li><a href=''>Equipe</a></li>
-                <li><a href=''>Classement</a></li>
-                <li class=''><a href=''>Login</a></li>
-                <li><a href=''>Register</a></li>
-                </ul>
-
+              <li><a href="">Accueil</a></li>
+              <li><a href="">Tournois</a></li>
+              <li><a href="">Equipe</a></li>
+              <li><a href="">Classement</a></li>
+              <li class=""><a href="">Login</a></li>
+              <li><a href="">Register</a></li>
+            </ul>
+          </div>
         </div>
-    </div>
-    </div>
-</header>
-<main>
-    <div class="sepaT">
-
+      </div>
+    </header>
+    <main>
+      <div class="sepaT">
         <div>
-            <h2>Bienvenue sur votre compte HEL</h2>';
+          <h2>Bienvenue sur votre compte HEL</h2>
         </div>
 
         <div id="produittournoiNow">
-
-            <div th:each="tournoi : ${tournois}" >
-                <span id="ici" th:if="${tournoi.getVisible() == 0}">
-                    <span id="pasafficher"></span>
-                </span>
-                <span th:unless="${tournoi.getVisible() == 0}">
-
-                <article>
-
-
-                        <div id="img">
-                            <img th:src="'/Img/'+${tournoi.getJeux()}+'.jpeg'">
-                        </div>
-                        <div id="ref">
-                            <h2 th:text="${tournoi.getName()}"></h2>
-                        </div>
-                        <h5>Nombre de participant :</h5>
-                        <h5 th:text="${tournoi.getNbPart()}">Nombre de participant :</h5>
-                        <h5>date et heure :</h5>
-                        <h5 th:text="${tournoi.getDate()}">et heure :</h5>
-
-                </article>
-                </span>
-            </div>
+          <div th:each="tournoi : ${tournois}">
+            <span id="ici" th:if="${tournoi.getVisible() == 0}">
+              <span id="pasafficher"></span>
+            </span>
+            <span th:unless="${tournoi.getVisible() == 0}">
+              <article>
+                <div id="img">
+                  <img th:src="'/Img/'+${tournoi.getJeux()}+'.jpeg'" />
+                </div>
+                <div id="ref">
+                  <h2 th:text="${tournoi.getName()}"></h2>
+                </div>
+                <h5>Nombre de participant :</h5>
+                <h5 th:text="${tournoi.getNbPart()}"></h5>
+                <h5>date et heure :</h5>
+                <h5 th:text="${tournoi.getDate()}"></h5>
+              </article>
+            </span>
+          </div>
         </div>
-    </div>
-</main>
-<footer class="footer">
-
-</footer>
-
-</body>
-<script src="/JS/jquery.min.js"></script>
-<script>
-        if(document.getElementById("pasafficher")){
-            const a = document.getElementById("ici");
-            a.parentElement.classList.add('invisible');
-            //console.log("Invisible");
-        }
-</script>
+      </div>
+    </main>
+    <footer class="footer"></footer>
+  </body>
+  <script src="/JS/jquery.min.js"></script>
+  <script>
+    if (document.getElementById("pasafficher")) {
+      const a = document.getElementById("ici");
+      a.parentElement.classList.add("invisible");
+      //console.log("Invisible");
+    }
+  </script>
 </html>
-
-
-
-
