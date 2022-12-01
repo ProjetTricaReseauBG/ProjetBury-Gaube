@@ -8,6 +8,10 @@ import lombok.Setter;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,4 +32,20 @@ public class ControlerTournois {
         model.addAttribute("tournois",getTournois());
         return "Tournois";
     }
+
+    @PostMapping("/addTournoisForm")
+    @ResponseBody
+    public RedirectView addShoppingCart(@ModelAttribute("addAlbum") Tournois tournois) throws Exception{
+        Tournois tournoisadd = new Tournois(tournois.getName(),tournois.getJeux(),tournois.getNbPart(),tournois.getVisible(),tournois.getDate());
+        portInTournois.AddTournois(tournoisadd);
+        return new RedirectView("/");
+
+    }
+
+
+
+
+
+
+
 }

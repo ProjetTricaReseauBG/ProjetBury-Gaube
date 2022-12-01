@@ -15,6 +15,7 @@ public class TournoisJpaEntity {
     }
 
     public TournoisJpaEntity(String name,String jeux,int nbPart,int visible,Date datet){
+        this.nProd = Long.parseLong("0");
         this.name=name;
         this.jeux=jeux;
         this.nbPart=nbPart;

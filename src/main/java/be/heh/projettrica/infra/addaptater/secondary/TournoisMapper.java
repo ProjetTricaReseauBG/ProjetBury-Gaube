@@ -20,4 +20,6 @@ public class TournoisMapper {
     public TournoisJpaEntity TournoisMapDomainToJpa(Tournois tournois){
         return new TournoisJpaEntity(tournois.getName(),tournois.getJeux(),tournois.getNbPart(),tournois.getVisible(),tournois.getDate());
     }
+
+
 }

@@ -8,4 +8,6 @@ public interface PortInTournois {
 
     public List<Tournois> AfficheTournois();
 
+    public void AddTournois(Tournois tournoisadd);
+
 }

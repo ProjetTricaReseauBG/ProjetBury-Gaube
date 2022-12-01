@@ -16,4 +16,9 @@ public class TournoisPersistenceAdapter implements PortOutTournois {
         List<TournoisJpaEntity> tournoisJpaEntities = tournoisRepository.findAll();
         return tournoisMapper.TournoisListMapJpaToDomain(tournoisJpaEntities);
     }
+
+    @Override
+    public void AddTournois(Tournois tournoisadd) {
+        tournoisRepository.save(tournoisMapper.TournoisMapDomainToJpa(tournoisadd));
+    }
 }

@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface PortOutTournois {
     public List<Tournois> getTournoisList();
+
+    void AddTournois(Tournois tournoisadd);
 }

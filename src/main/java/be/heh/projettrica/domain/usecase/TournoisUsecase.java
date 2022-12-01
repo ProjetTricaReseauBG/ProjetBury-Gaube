@@ -15,4 +15,9 @@ public class TournoisUsecase implements PortInTournois {
     public List<Tournois> AfficheTournois() {
         return portouttournois.getTournoisList();
     }
+
+    @Override
+    public void AddTournois(Tournois tournoisadd) {
+        portouttournois.AddTournois(tournoisadd);
+    }
 }
