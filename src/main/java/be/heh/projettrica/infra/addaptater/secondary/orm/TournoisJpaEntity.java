@@ -14,19 +14,18 @@ public class TournoisJpaEntity {
 
     }
 
-    public TournoisJpaEntity(String name,String jeux,int nbPart,int visible,Date datet){
-        this.nProd = Long.parseLong("0");
+    public TournoisJpaEntity(String name,String jeux,int nbPart,int visible,long numerot){
+        this.numerot = Long.parseLong("0");
         this.name=name;
         this.jeux=jeux;
         this.nbPart=nbPart;
         this.visible=visible;
-        this.date=datet;
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "numerot")
-    private Long nProd;
+    private Long numerot;
 
     @Column(name = "nametournois")
     private String name;
@@ -40,7 +39,5 @@ public class TournoisJpaEntity {
     @Column(name = "visible")
     private int visible;
 
-    @Column(name = "datet")
-    private Date date;
 
 }

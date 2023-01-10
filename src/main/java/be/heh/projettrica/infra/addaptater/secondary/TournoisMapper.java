@@ -12,13 +12,13 @@ public class TournoisMapper {
         List<Tournois> tournois = new ArrayList<>();
 
         for (TournoisJpaEntity tournoisJpaEntity : tournoisJpaEntities){
-            tournois.add(new Tournois(tournoisJpaEntity.getName(),tournoisJpaEntity.getJeux(),tournoisJpaEntity.getNbPart(),tournoisJpaEntity.getVisible(),tournoisJpaEntity.getDate()));
+            tournois.add(new Tournois(tournoisJpaEntity.getName(),tournoisJpaEntity.getJeux(),tournoisJpaEntity.getNbPart(),tournoisJpaEntity.getVisible(),tournoisJpaEntity.getNumerot()));
         }
         return tournois;
     }
 
     public TournoisJpaEntity TournoisMapDomainToJpa(Tournois tournois){
-        return new TournoisJpaEntity(tournois.getName(),tournois.getJeux(),tournois.getNbPart(),tournois.getVisible(),tournois.getDate());
+        return new TournoisJpaEntity(tournois.getName(),tournois.getJeux(),tournois.getNbPart(),tournois.getVisible(),tournois.getNumerot());
     }
 
 

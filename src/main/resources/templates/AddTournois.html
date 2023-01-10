@@ -21,7 +21,7 @@
       </div>
       <div class="menu">
         <ul>
-          <li><a href="">Accueil</a></li>
+          <li><a href="/">Accueil</a></li>
           <li><a href="">Tournois</a></li>
           <li><a href="">Equipe</a></li>
           <li><a href="">Classement</a></li>
@@ -42,10 +42,10 @@
         <fieldset id="registerTournois">
           <h5>Nom du tournois : </h5>
           <input name="name">
-          <h5>Date du tournois : </h5>
-          <input name="date">
           <h5>Jeux :</h5>
-          <libellé name="jeux">Quelle est le jeux du tournois ?</libellé>
+          <select type="select" name="jeux">
+          <nom>jeux</nom>
+          <libellé>Quelle est le jeux du tournois ?</libellé>
           <option value="league of legends">League of legends</option>
           <option value="CSGO">CSGO</option>
           <option value="dota">Dota 2</option>
@@ -53,10 +53,11 @@
           <option value="starcraft">starcraft 2</option>
           </select>
           <h5>Nombre de joueur : </h5>
-          <input name="nbPart">
+          <input type="number" name="nbPart">
           <h5>Visible ou pas ? : </h5>
-          <input name="visible">
-          <input type="submit" value="Valider" name="register" id="submit">
+          <input name="visible"></br>
+          <input name="numerot" value=0></br>
+          <input type="submit" value="Valider" id="submit">
 
         </fieldset>
 
@@ -68,4 +69,5 @@
 </main>
 <footer class="footer"></footer>
 </body>
+
 </html>

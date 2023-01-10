@@ -3,8 +3,6 @@ package be.heh.projettrica.domain.entities;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
-import java.util.Date;
-
 @RequiredArgsConstructor
 public class Tournois {
 
@@ -21,5 +19,5 @@ public class Tournois {
     private final int visible;
 
     @Getter
-    private final Date date;
+    private final long numerot;
 }

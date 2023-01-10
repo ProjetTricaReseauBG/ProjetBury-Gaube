@@ -19,6 +19,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Controller
 public class ControlerTournois {
+
     @Getter
     private final PortInTournois portInTournois;
 
@@ -40,8 +41,8 @@ public class ControlerTournois {
 
     @PostMapping("/addTournoisForm")
     @ResponseBody
-    public RedirectView addTournois(@ModelAttribute("tournoisadd") Tournois tournois) throws Exception{
-        Tournois tournoisadd = new Tournois(tournois.getName(),tournois.getJeux(),tournois.getNbPart(),tournois.getVisible(),tournois.getDate());
+    public RedirectView AddTournois(@ModelAttribute("tournoisadd") Tournois tournois) throws Exception{
+        Tournois tournoisadd = new Tournois(tournois.getName(),tournois.getJeux(),tournois.getNbPart(),tournois.getVisible(),tournois.getNumerot());
         portInTournois.AddTournois(tournoisadd);
         return new RedirectView("/");
 

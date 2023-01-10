@@ -3,7 +3,6 @@ CREATE TABLE IF NOT EXISTS tournois(
     jeux varchar(256),
     nbpart int,
     numerot SERIAL primary key,
-    visible int,
-    datet timestamp
+    visible int
     );
 SET timezone = 'Europe/Brussels';
