@@ -44,13 +44,12 @@
         </div>
 
         <div id="EquipeTable">
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Jeux</th>
-                    <th>NbPart</th>
-                    <th>Visible</th>
-                    <th>Date</th>
+            <table class="test">
+                <tr id="tableHeader">
+                    <td><h4>Nom</h4></td>
+                    <td><h4>Jeux</h4></td>
+                    <td><h4>NbrJoueurs</h4></td>
+                    <td><h4>NbrWin</h4></td>
                 </tr>
 
                 <div th:each="equipe : ${equipes}" >
@@ -58,13 +57,13 @@
                         <span id="pasafficher"></span>
                     </span>
                     <span th:unless="${equipe.getVisible() == 0}">
-                        <tr>
-                            <td th:text="${equipe.getName()}"></td>
-                            <td th:text="${equipe.getJeux()}"></td>
-                            <td th:text="${equipe.getNbplayer()}"></td>
-                            <td th:text="${equipe.getVisible()}"></td>
-                            <td th:text="${equipe.getNbwin()}"></td>
-                        </tr>
+                            <tr id="table">
+                                <td th:text="${equipe.getName()}"></td>
+                                <td th:text="${equipe.getJeux()}"></td>
+                                <td th:text="${equipe.getNbplayer()}"></td>
+                                <!--<td th:text="${equipe.getVisible()}"></td>-->
+                                <td th:text="${equipe.getNbwin()}"></td>
+                            </tr>
                     </span>
                 </div>
             </table>
