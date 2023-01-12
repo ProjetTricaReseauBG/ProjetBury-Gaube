@@ -17,6 +17,6 @@ public class HomeController {
         if (principal != null) {
             model.addAttribute("profile", principal.getClaims());
         }
-        return "index";
+        return "Tournois";
     }
 }

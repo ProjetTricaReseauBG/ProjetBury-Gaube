@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -24,9 +24,9 @@
               <li><a href="/">Accueil</a></li>
               <li><a href="/addTournois">AddTournois</a></li>
               <li><a href="">Equipe</a></li>
-              <li><a href="">Classement</a></li>
-              <li class=""><a href="/index">Login</a></li>
-              <li><a href="">Register</a></li>
+              <li><a href="/viewTournois">Tournois</a></li>
+              <li class=""><a sec:authorize="!isAuthenticated()" th:href="@{/oauth2/authorization/auth0}">Login</a></li>
+              <li><a sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a></li>
             </ul>
           </div>
         </div>
@@ -36,26 +36,6 @@
       <div class="sepaT">
         <div>
           <h2>Bienvenue sur votre compte HEL</h2>
-        </div>
-
-        <div id="produittournoiNow">
-          <div th:each="tournoi : ${tournois}">
-            <span id="ici" th:if="${tournoi.getVisible() == 0}">
-              <span id="pasafficher"></span>
-            </span>
-            <span th:unless="${tournoi.getVisible() == 0}">
-              <article>
-                <div id="img">
-                  <img th:src="'/Img/'+${tournoi.getJeux()}+'.jpeg'" />
-                </div>
-                <div id="ref">
-                  <h2 th:text="${tournoi.getName()}"></h2>
-                </div>
-                <h5>Nombre de participant :</h5>
-                <h5 th:text="${tournoi.getNbPart()}"></h5>
-              </article>
-            </span>
-          </div>
         </div>
       </div>
     </main>

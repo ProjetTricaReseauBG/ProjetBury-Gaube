@@ -27,11 +27,11 @@ public class ControlerTournois {
     @Setter
     private List<Tournois> tournois = new ArrayList<>();
 
-    @GetMapping("/")
+    @GetMapping("/viewTournois")
     public String AfficheTournois(Model model){
         setTournois(getPortInTournois().AfficheTournois());
         model.addAttribute("tournois",getTournois());
-        return "Tournois";
+        return "viewTournois";
     }
     @GetMapping("/addTournois")
     public String AddTournois(){
@@ -47,6 +47,8 @@ public class ControlerTournois {
         return new RedirectView("/");
 
     }
+
+
 
 
 

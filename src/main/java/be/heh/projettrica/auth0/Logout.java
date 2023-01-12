@@ -18,9 +18,9 @@ import java.io.IOException;
  * This controller will also log users out of Auth0 by calling the Auth0 logout endpoint.
  */
 @Controller
-public class LogoutHandler extends SecurityContextLogoutHandler {
+public class Logout extends SecurityContextLogoutHandler {
 
-    private final ClientRegistrationRepository clientRegistrationRepository;
+    private ClientRegistrationRepository clientRegistrationRepository;
 
     /**
      * Create a new instance with a {@code ClientRegistrationRepository}, so that we can look up information about the
@@ -29,7 +29,7 @@ public class LogoutHandler extends SecurityContextLogoutHandler {
      * @param clientRegistrationRepository the {@code ClientRegistrationRepository} for this application.
      */
     @Autowired
-    public LogoutHandler(ClientRegistrationRepository clientRegistrationRepository) {
+    public void LogoutHandler(ClientRegistrationRepository clientRegistrationRepository) {
         this.clientRegistrationRepository = clientRegistrationRepository;
     }
 
@@ -37,9 +37,9 @@ public class LogoutHandler extends SecurityContextLogoutHandler {
      * Delegates to {@linkplain SecurityContextLogoutHandler} to log the user out of the application, and then logs
      * the user out of Auth0.
      *
-     * @param httpServletRequest the request.
+     * @param httpServletRequest  the request.
      * @param httpServletResponse the response.
-     * @param authentication the current authentication.
+     * @param authentication      the current authentication.
      */
     @Override
     public void logout(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,

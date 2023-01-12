@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -37,37 +37,36 @@
     <div>
       <h2>Bienvenue sur votre compte HEL</h2>
     </div>
-    <div class="sepaUser">
-      <form action="/addTournoisForm" method="post" class="inscription" name="tournoisadd">
-        <fieldset id="registerTournois">
-          <h5>Nom du tournois : </h5>
-          <input name="name">
-          <h5>Jeux :</h5>
-          <select type="select" name="jeux">
-          <nom>jeux</nom>
-          <libellé>Quelle est le jeux du tournois ?</libellé>
-          <option value="league of legends">League of legends</option>
-          <option value="CSGO">CSGO</option>
-          <option value="dota">Dota 2</option>
-          <option value="overwatch">Overwatch</option>
-          <option value="starcraft">starcraft 2</option>
-          </select>
-          <h5>Nombre de joueur : </h5>
-          <input type="number" name="nbPart">
-          <h5>Visible ou pas ? : </h5>
-          <input name="visible"></br>
-          <input class="hiden" name="numerot" value=0></br>
-          <input type="submit" value="Valider" id="submit">
 
-        </fieldset>
-
-      </form>
-
+    <div id="produittournoiNow">
+      <div th:each="tournoi : ${tournois}">
+            <span id="ici" th:if="${tournoi.getVisible() == 0}">
+              <span id="pasafficher"></span>
+            </span>
+        <span th:unless="${tournoi.getVisible() == 0}">
+              <article>
+                <div id="img">
+                  <img th:src="'/Img/'+${tournoi.getJeux()}+'.jpeg'" />
+                </div>
+                <div id="ref">
+                  <h2 th:text="${tournoi.getName()}"></h2>
+                </div>
+                <h5>Nombre de participant :</h5>
+                <h5 th:text="${tournoi.getNbPart()}"></h5>
+              </article>
+            </span>
+      </div>
     </div>
-
   </div>
 </main>
 <footer class="footer"></footer>
 </body>
-
+<script src="/JS/jquery.min.js"></script>
+<script>
+  if (document.getElementById("pasafficher")) {
+    const a = document.getElementById("ici");
+    a.parentElement.classList.add("invisible");
+    //console.log("Invisible");
+  }
+</script>
 </html>
