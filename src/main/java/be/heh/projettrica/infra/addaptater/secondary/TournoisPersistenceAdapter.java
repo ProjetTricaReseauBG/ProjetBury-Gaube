@@ -1,5 +1,6 @@
 package be.heh.projettrica.infra.addaptater.secondary;
 
+import be.heh.projettrica.domain.entities.Equipes;
 import be.heh.projettrica.domain.entities.Tournois;
 import be.heh.projettrica.domain.port.out.PortOutTournois;
 import be.heh.projettrica.infra.addaptater.secondary.orm.TournoisJpaEntity;
@@ -11,6 +12,8 @@ import java.util.List;
 public class TournoisPersistenceAdapter implements PortOutTournois {
     private final TournoisRepository tournoisRepository; // Autowired repository
     private final TournoisMapper tournoisMapper; // Autowired mapper
+
+
 
     // Implementing the PortOutTournois interface
     @Override

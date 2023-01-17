@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,7 +23,7 @@
         <ul>
           <li><a href="/">Accueil</a></li>
           <li><a href="/addTournois">AddTournois</a></li>
-          <li><a href="">Equipe</a></li>
+          <li><a href="/Equipes">Equipe</a></li>
           <li><a href="/viewTournois">Tournois</a></li>
           <li class=""><a sec:authorize="!isAuthenticated()" th:href="@{/oauth2/authorization/auth0}">Login</a></li>
           <li><a sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a></li>
