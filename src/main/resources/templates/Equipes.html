@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/Style/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tournois</title>
+</head>
+<body>
+<header>
+    <h1>Tournois Esport</h1>
+    <div>
+
+        <div class="fondgris">
+
+            <div class="nom">
+                <div class="sepa">
+                    <img class="icone" src="/Img/icone.jpeg" alt="ma photo de cv">
+                    <h2>HEL</h2>
+                </div>
+                <div>
+                </div>
+            </div>
+            <div class='menu'>
+                <ul>
+                    <li><a href=''>Accueil</a></li>
+                    <li><a href=''>Tournois</a></li>
+                    <li><a href=''>Equipe</a></li>
+                    <li><a href=''>Classement</a></li>
+                    <li class=''><a href=''>Login</a></li>
+                    <li><a href=''>Register</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="sepaT">
+
+        <div>
+            <h2>Bienvenue sur votre compte HEL</h2>';
+        </div>
+
+        <div id="EquipeTable">
+            <table class="test">
+                <tr id="tableHeader">
+                    <td><h4>Nom</h4></td>
+                    <td><h4>Jeux</h4></td>
+                    <td><h4>NbrJoueurs</h4></td>
+                    <td><h4>NbrWin</h4></td>
+                </tr>
+
+                <div th:each="equipe : ${equipes}" >
+                    <span id="ici" th:if="${equipe.getVisible() == 0}">
+                        <span id="pasafficher"></span>
+                    </span>
+                    <span th:unless="${equipe.getVisible() == 0}">
+                            <tr id="table">
+                                <td th:text="${equipe.getName()}"></td>
+                                <td th:text="${equipe.getJeux()}"></td>
+                                <td th:text="${equipe.getNbplayer()}"></td>
+                                <!--<td th:text="${equipe.getVisible()}"></td>-->
+                                <td th:text="${equipe.getNbwin()}"></td>
+                            </tr>
+                    </span>
+                </div>
+            </table>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+
+</footer>
+
+</body>
+<script src="/JS/jquery.min.js"></script>
+<script>
+    if(document.getElementById("pasafficher")){
+        const a = document.getElementById("ici");
+        a.parentElement.classList.add('invisible');
+        //console.log("Invisible");
+    }
+</script>
+</html>

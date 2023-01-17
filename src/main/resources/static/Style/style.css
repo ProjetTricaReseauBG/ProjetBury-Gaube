@@ -1,0 +1,461 @@
+html{
+
+}
+body{
+  margin: 0;
+  background: url("../Img/testbackground.jpeg ") no-repeat center fixed;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+/*header*/
+
+header{
+
+}
+header h1{
+  display: none;
+}
+
+
+header div.sepa{
+  list-style :none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-areas: 'nom';
+  grid-template-columns: 0.6fr 0.4fr;
+  height: 10%;
+  color: black;
+
+
+
+}
+
+.invisible{
+  display: none;
+}
+
+
+
+header div .fondgris{
+  background: url("../Img/backgroundmenu.jpeg") no-repeat center fixed;
+  background-position:top;
+
+  opacity: 95%;
+
+
+}
+
+header div input{
+  width: 80px;
+  height: 20px;
+
+
+
+}
+
+header div.nom{
+  display: grid;
+  grid-template-areas: 'nom' 'icone';
+  grid-template-columns: 1fr 0.15fr;
+
+
+}
+header div.nom h2{
+  font-size: 3em;
+  margin-left: initial;
+  margin-top: 3%;
+}
+
+header div img.icone{
+  margin-right: initial;
+}
+
+header div div img{
+  border-radius: 45%;
+  width: 15%;
+  height: 80%;
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+header div ul li{
+  padding-top:2%;
+  padding-bottom: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+
+}
+header div  ul{
+  list-style :none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: grid;
+  grid-template-areas: 'A' 'B' 'C' 'D' 'E' 'F' ;
+  grid-template-columns:repeat(6,0.5fr);
+
+}
+header div.menu ul li.register{
+  display: grid;
+  grid-template-areas: "login";
+  grid-template-columns: 0.5fr 0.5fr;
+  height: 75%;
+}
+header div.menu ul li.register a{
+  margin-right: 2%;
+}
+
+header  ul a {
+
+  text-decoration : none;
+  padding: 1%;
+  display: grid;
+  text-transform: uppercase;
+  font-size: 1.0em;
+  font-family: "Arrial",sans-serif;
+  border: 1px solid black;
+  background: url("../Img/backgroundmenu.jpeg") no-repeat center ;
+  background-attachment: initial;
+  background-position:bottom;
+  border-radius: 10px;
+  margin: 0;
+}
+
+
+header ul a:visited {
+  color: white;
+}
+
+header ul a:active {
+  color: red;
+}
+
+header ul a:hover {
+  color: red;
+}
+
+
+/* main */
+main fieldset{
+  background: url("../Img/fondtablea.jpeg") no-repeat center fixed;
+}
+main div.sepa{
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-areas: 'A' 'B';
+  grid-template-columns: 0.45fr 1fr;
+}
+main div h2{
+  color: white;
+  text-decoration: underline;
+  text-align: center;
+}
+main div h4{
+  color: white;
+  text-decoration: underline;
+  text-align: center;
+}
+main div h5{
+  color: white;
+  text-align: center;
+}
+main div div.TournoisA{
+  border: 1px solid white;
+}
+main div ul li{
+  padding-top:2%;
+  padding-bottom: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
+
+
+}
+main div ul{
+  list-style :none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: grid;
+  grid-template-areas: 'A' 'B' 'C' 'D' 'E' 'F';
+  grid-template-columns:repeat(6,0.5fr);
+}
+
+main div  ul a {
+
+  text-decoration : none;
+  display: grid;
+  text-transform: uppercase;
+  font-size: 1.0em;
+  font-family: "Arrial",sans-serif;
+  border: 1px solid black;
+  background-attachment: initial;
+  background-position:bottom;
+  margin: 0;
+}
+main div  ul a#OW{
+  background: url("../Img/overwatch.jpeg") no-repeat center ;
+}
+main div  ul a#ST{
+  background: url("../Img/starcraft.jpeg") no-repeat center ;
+}
+main div  ul a#DT2{
+  background: url("../Img/dota.jpeg") no-repeat center ;
+}
+main div  ul a#CSGO{
+  background: url("../Img/CSGO.jpeg") no-repeat center ;
+}
+main div  ul a#LOL{
+  background: url("../Img/league of legends.jpeg") no-repeat center ;
+}
+main div  ul a#back{
+  background: url("../Img/fondtablea.jpeg") no-repeat center ;
+}
+
+
+
+main div ul a:visited {
+  color: white;
+}
+
+main div ul a:active {
+  color: red;
+}
+
+main div ul a:hover {
+  color: red;
+}
+
+main div.login{
+  text-align: center;
+}
+main div.login p{
+  color :white
+}
+/* footer */
+
+
+
+.hiden{
+  display: none;
+}
+
+main table.test{
+  background: url("../Img/fondtablea.jpeg") no-repeat center fixed;
+  margin: auto;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+main table.test tr#table td{
+  border: 1px solid white;
+}
+
+main div.sepaUser{
+  list-style :none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: grid;
+  grid-template-areas: 'A';
+  grid-template-rows:repeat(1,0.5fr);
+}
+main div.sepaT{
+
+  list-style :none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: grid;
+  grid-template-areas: 'A' 'B';
+  grid-template-rows:0.2fr;
+}
+main div div.sepaTournois{
+  list-style :none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: grid;
+  grid-template-areas: 'A' 'B';
+  grid-template-rows:repeat(2,0.5fr);
+}
+main div div#produittournoi {
+  list-style :none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: grid;
+  grid-template-areas: 'A' 'B' 'C' 'D' 'E';
+  grid-template-columns:repeat(5,0.5fr);
+}
+main div div article{
+  border: 1px solid white;
+  margin: 2%;
+  background: url("../Img/fondtablea.jpeg") no-repeat center fixed;
+}
+main div div article img{
+  width: 100%;
+  height: 150px;
+}
+main div div#produittournoiNow{
+  list-style :none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: grid;
+  grid-template-areas: 'A' 'B' 'C' 'D';;
+  grid-template-columns:repeat(4,0.5fr);
+}
+
+body main table{
+  color: white;
+}
+
+/*partie desktop*/
+
+@media screen and (max-width: 1024px){
+
+  html{
+
+  }
+
+  body{
+    margin: 0 auto;
+    padding: 0;
+    width: 96%;
+  }
+
+  header div.sepa{
+    grid-template-columns: none;
+    grid-template-rows: 0.5fr 0.5fr;
+
+
+
+  }
+
+  header div img.photo{
+    grid-row: 3;
+  }
+  header div img.drapeaux{
+    grid-row:1 ;
+    margin-right: initial;
+    margin-top: 2%;
+  }
+  header div.nom{
+    text-align: center;
+  }
+  header div.nom h2{
+    font-size: 2em;
+  }
+  header div.nom h3{
+    font-size:1.5em;
+  }
+
+  main div.sepa{
+    grid-template-columns: none;
+    grid-template-rows: 1fr;
+  }
+
+  main div.separow {
+    border-top: 1px solid white;
+    margin-bottom: 5%;
+    margin-top: 7%;
+  }
+  main div p.white{
+    margin-bottom:7% ;
+  }
+  main div span.infosperso p{
+    text-align: center;
+
+  }
+
+
+
+
+
+
+}
+
+@media print{
+  body{
+    margin: 0 auto;
+    padding: 0;
+    width: 96%;
+  }
+
+  header div.sepa{
+    grid-template-columns: none;
+    grid-template-rows: 0.5fr 0.5fr;
+
+
+
+  }
+
+  header div img.photo{
+    grid-row: 3;
+  }
+  header div img.drapeaux{
+    grid-row:1 ;
+    display: none;
+  }
+  header div.nom{
+    text-align: center;
+  }
+  header div.nom h2{
+    font-size: 2em;
+  }
+  header div.nom h3{
+    font-size:1.5em;
+  }
+
+  main div.sepa{
+    grid-template-columns: none;
+    grid-template-rows: 1fr;
+  }
+  main div div.infosperso p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  main div.perso{
+    margin: 0;
+    padding: 0;
+  }
+  main div div h2.perso{
+    margin-right: 0;
+    margin-bottom: 2%;
+    margin-top: 13%;
+  }
+
+  main div.separow {
+    border-top: 1px solid white;
+    margin-bottom: 5%;
+    margin-top: 7%;
+  }
+  main div p.white{
+    margin-bottom:7% ;
+  }
+  main div span.infosperso p{
+    text-align: center;
+
+  }
+  main div div ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  main div.separow h2{
+    margin-top: 50%;
+  }
+
+
+}
