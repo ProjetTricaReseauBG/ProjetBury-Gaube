@@ -7,17 +7,17 @@ import lombok.RequiredArgsConstructor;
 public class Tournois {
 
     @Getter
-    private final String name;
+    private final String name; // name of the tournament
 
     @Getter
-    private final String jeux;
+    private final String jeux; // name of the game
 
     @Getter
-    private final int nbPart;
+    private final int nbPart; // number of participants
 
     @Getter
-    private final int visible;
+    private final int visible; // visibility of the tournament
 
     @Getter
-    private final long numerot;
+    private final long numerot; // tournament number
 }

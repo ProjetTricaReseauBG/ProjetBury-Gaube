@@ -14,10 +14,10 @@ public class TournoisUsecase implements PortInTournois {
     @Override
     public List<Tournois> AfficheTournois() {
         return portouttournois.getTournoisList();
-    }
+    } // use the portouttournois to get the list of Tournois
 
     @Override
     public void AddTournois(Tournois tournoisadd) {
         portouttournois.AddTournois(tournoisadd);
-    }
+    } // use the portouttournois to add a Tournois
 }

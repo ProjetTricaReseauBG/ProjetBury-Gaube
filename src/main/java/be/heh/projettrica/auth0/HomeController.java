@@ -14,9 +14,12 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(Model model, @AuthenticationPrincipal OidcUser principal) {
+        // check if the principal object is not null
         if (principal != null) {
+            // add the claims of the principal object to the model object with the key "profile"
             model.addAttribute("profile", principal.getClaims());
         }
+        // return the string "Tournois", which is probably the name of the view (template) that will be used to render the response for this
         return "Tournois";
     }
 }

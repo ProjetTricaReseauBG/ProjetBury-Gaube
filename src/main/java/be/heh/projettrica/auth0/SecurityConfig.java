@@ -18,16 +18,19 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.authorizeRequests().mvcMatchers("/addTournois").authenticated(); //GET
-        http.authorizeRequests().mvcMatchers("/addTournois").authenticated(); //POST
+        http.authorizeRequests().mvcMatchers("/addTournois").authenticated();
+        //GET request to addTournois should be authenticated
+        http.authorizeRequests().mvcMatchers("/addTournois").authenticated();
+        //POST request to addTournois should be authenticated
 
         http.authorizeRequests().anyRequest().permitAll();
+        // Any other request should be permitted
         http.cors().and().csrf().disable();
         return http
                 .oauth2Login()
                 .and().logout()
-                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .addLogoutHandler(logoutHandler)
+                .logoutRequestMatcher(new AntPathRequestMatcher("/logout")) // match logout request
+                .addLogoutHandler(logoutHandler) // add logout handler
                 .and().build();
     }
 }

@@ -21,16 +21,16 @@ import java.util.List;
 public class ControlerTournois {
 
     @Getter
-    private final PortInTournois portInTournois;
+    private final PortInTournois portInTournois; // instance variable of PortInTournois interface
 
     @Getter
     @Setter
-    private List<Tournois> tournois = new ArrayList<>();
+    private List<Tournois> tournois = new ArrayList<>(); // a list of Tournois
 
     @GetMapping("/viewTournois")
     public String AfficheTournois(Model model){
-        setTournois(getPortInTournois().AfficheTournois());
-        model.addAttribute("tournois",getTournois());
+        setTournois(getPortInTournois().AfficheTournois()); // use the portInTournois to get the list of Tournois
+        model.addAttribute("tournois",getTournois()); // add the list of Tournois to the model
         return "viewTournois";
     }
     @GetMapping("/addTournois")
@@ -43,7 +43,7 @@ public class ControlerTournois {
     @ResponseBody
     public RedirectView AddTournois(@ModelAttribute("tournoisadd") Tournois tournois) throws Exception{
         Tournois tournoisadd = new Tournois(tournois.getName(),tournois.getJeux(),tournois.getNbPart(),tournois.getVisible(),tournois.getNumerot());
-        portInTournois.AddTournois(tournoisadd);
+        portInTournois.AddTournois(tournoisadd); // use the portInTournois to add a Tournois
         return new RedirectView("/");
 
     }
