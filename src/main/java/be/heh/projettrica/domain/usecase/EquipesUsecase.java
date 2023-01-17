@@ -15,4 +15,8 @@ public class EquipesUsecase implements PortInEquipes {
     public List<Equipes> AfficheEquipes() {
         return portoutEquipes.getEquipesList();
     }
+
+    public void AddEquipes(Equipes Equipesadd) {
+        portoutEquipes.AddEquipes(Equipesadd);
+    }
 }
