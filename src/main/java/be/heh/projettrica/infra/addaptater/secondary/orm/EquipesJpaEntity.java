@@ -24,7 +24,7 @@ public class EquipesJpaEntity {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "numerot")
     private Long nProd;
 
