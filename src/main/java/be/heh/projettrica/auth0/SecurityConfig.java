@@ -23,6 +23,11 @@ public class SecurityConfig {
         http.authorizeRequests().mvcMatchers("/addTournois").authenticated();
         //POST request to addTournois should be authenticated
 
+        http.authorizeRequests().mvcMatchers("/addEquipes").authenticated();
+        //GET request to addEquipes should be authenticated
+        http.authorizeRequests().mvcMatchers("/addEquipes").authenticated();
+        //POST request to addEquipes should be authenticated
+
         http.authorizeRequests().anyRequest().permitAll();
         // Any other request should be permitted
         http.cors().and().csrf().disable();

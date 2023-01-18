@@ -7,7 +7,7 @@ import java.util.List;
 public interface PortOutEquipes {
     public List<Equipes> getEquipesList();
 
-    void AddEquipes(Equipes Equipesadd);
+    void AddEquipes(Equipes equipesadd);
 
 
 }

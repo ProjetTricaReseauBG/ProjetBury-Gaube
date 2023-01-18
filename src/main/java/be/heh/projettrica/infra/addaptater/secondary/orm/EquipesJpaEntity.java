@@ -14,19 +14,15 @@ public class EquipesJpaEntity {
 
     }
 
-    public EquipesJpaEntity(String name,String jeux,int nbplayer,int visible,int nbwin, int idequipe){
+    public EquipesJpaEntity(String name,String jeux,int nbplayer,int visible,int nbwin, long idequipe){
         this.name=name;
         this.jeux=jeux;
         this.nbplayer=nbplayer;
         this.visible=visible;
         this.nbwin=nbwin;
-        this.idequipe = idequipe;
+        this.idequipe = Long.parseLong("0");
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "numerot")
-    private Long nProd;
 
     @Column(name = "nameequipes")
     private String name;
@@ -43,7 +39,9 @@ public class EquipesJpaEntity {
     @Column(name = "nbwin")
     private int nbwin;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idequipe")
-    private int idequipe;
+    private long idequipe;
 
 }

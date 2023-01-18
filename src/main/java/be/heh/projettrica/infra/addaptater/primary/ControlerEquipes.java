@@ -44,7 +44,7 @@ public class ControlerEquipes {
     public RedirectView AddEquipes(@ModelAttribute("equipesadd") Equipes equipes) throws Exception{
         Equipes equipesadd = new Equipes(equipes.getName(),equipes.getJeux(),equipes.getNbplayer(),equipes.getVisible(),equipes.getNbwin(),equipes.getIdequipe());
         portInEquipes.AddEquipes(equipesadd);
-        return new RedirectView("/addEquipes");
+        return new RedirectView("/Equipes");
 
     }
 }

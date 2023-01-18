@@ -22,5 +22,5 @@ public class Equipes {
     private final int nbwin;
 
     @Getter
-    private final int idequipe;
+    private final long idequipe;
 }
