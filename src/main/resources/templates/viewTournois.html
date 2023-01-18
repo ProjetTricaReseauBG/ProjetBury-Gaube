@@ -26,8 +26,8 @@
           <li><a href="/addEquipes">AddEquipe</a></li>
           <li><a href="/Equipes">Equipe</a></li>
           <li><a href="/viewTournois">Tournois</a></li>
-          <li class=""><a sec:authorize="!isAuthenticated()" th:href="@{/oauth2/authorization/auth0}">Login</a></li>
-          <li><a sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a></li>
+          <li class=""><a sec:authorize="!isAuthenticated()" th:href="@{/oauth2/authorization/auth0}">Login</a>
+            <a sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a></li>
         </ul>
       </div>
     </div>

@@ -44,7 +44,7 @@ public class ControlerTournois {
     public RedirectView AddTournois(@ModelAttribute("tournoisadd") Tournois tournois) throws Exception{
         Tournois tournoisadd = new Tournois(tournois.getName(),tournois.getJeux(),tournois.getNbPart(),tournois.getVisible(),tournois.getNumerot());
         portInTournois.AddTournois(tournoisadd); // use the portInTournois to add a Tournois
-        return new RedirectView("/");
+        return new RedirectView("/viewTournois");
 
     }
 
