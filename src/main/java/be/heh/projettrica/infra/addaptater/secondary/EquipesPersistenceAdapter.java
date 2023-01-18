@@ -16,4 +16,9 @@ public class EquipesPersistenceAdapter implements PortOutEquipes {
         List<EquipesJpaEntity> equipesJpaEntities = equipesRepository.findAll();
         return equipesMapper.EquipesListMapJpaToDomain(equipesJpaEntities);
     }
+
+    @Override
+    public void AddEquipes(Equipes equipesadd) {
+        equipesRepository.save(equipesMapper.EquipesMapDomainToJpa(equipesadd));
+    }
 }

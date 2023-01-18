@@ -7,5 +7,8 @@ import java.util.List;
 public interface PortInEquipes {
 
     public List<Equipes> AfficheEquipes();
+    public void AddEquipes(Equipes Equipesadd);
+
+
 
 }
